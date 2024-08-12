@@ -16,7 +16,7 @@ public class MvcConfig implements WebMvcConfigurer{
 
     @Override
     public void addInterceptors(InterceptorRegistry registry) {
-        registry.addInterceptor(loadingInterceptor);
+        registry.addInterceptor(loadingInterceptor).addPathPatterns("/app/test2", "/app/test3" ); //app/** for all routes in app path
         
     }
     
